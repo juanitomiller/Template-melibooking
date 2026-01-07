@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Notificación de Recambio de Equipo</title>
+    <style type="text/css">
+        /* Estilos para compatibilidad con emails */
+        ul.info-list {
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+        }
+        ul.info-list li {
+            margin: 12px 0 !important;
+            padding: 16px 20px !important;
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            border-radius: 14px !important;
+            border-left: 4px solid #FFE600 !important;
+            color: #1e293b !important;
+            font-size: 15px !important;
+            font-weight: 600 !important;
+            line-height: 1.6 !important;
+        }
+        ul.info-list li strong {
+            color: #001B5E !important;
+            font-weight: 700 !important;
+        }
+    </style>
+    <!--[if mso]>
+    <style type="text/css">
+        body, table, td {font-family: Arial, sans-serif !important;}
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f7fa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    <!-- Wrapper Table -->
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f7fa; padding: 40px 20px;">
+        <tr>
+            <td align="center">
+                <!-- Main Container Table -->
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="background-color: #FFE600; padding: 28px 40px; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td width="120" valign="middle" style="padding-right: 24px;">
+                                        <img src="https://drive.google.com/thumbnail?id=1dsFIiNTFIuiDfHmPBuaFSON25LnhWW9F&sz=w200" 
+                                             alt="MercadoLibre Logo" 
+                                             width="85" 
+                                             height="85" 
+                                             style="display: block; width: 85px; height: auto; max-width: 85px; border: 0; outline: none; text-decoration: none;" />
+                                    </td>
+                                    <td valign="middle">
+                                        <h1 style="margin: 0 0 8px 0; color: #001B5E; font-size: 24px; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px;">Recambio de Equipo</h1>
+                                        <p style="margin: 0 0 12px 0; color: rgba(0, 27, 94, 0.75); font-size: 13px; font-weight: 500;">Notificación Trimestre <?= trimestre ?></p>
+                                        <span style="display: inline-block; background-color: rgba(255, 255, 255, 0.95); color: #001B5E; padding: 6px 16px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">RECAMBIO-<?= trimestre ?>-2026</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Department Section -->
+                    <tr>
+                        <td style="background-color: #ffffff; padding: 24px 40px; border-bottom: 3px solid #FFE600;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td width="60" valign="middle" style="padding-right: 20px;">
+                                        <img src="https://drive.google.com/thumbnail?id=1U8xm_Zog32fKCDiPMF8AwCKOziRHWl5u&sz=w200" 
+                                             alt="Internal Systems Logo" 
+                                             width="60" 
+                                             height="60" 
+                                             style="display: block; width: 60px; height: auto; max-width: 60px; border: 0; outline: none; text-decoration: none;" />
+                                    </td>
+                                    <td valign="middle">
+                                        <h2 style="margin: 0 0 4px 0; color: #001B5E; font-size: 20px; font-weight: 700; letter-spacing: -0.3px;">Internal Systems - Chile</h2>
+                                        <p style="margin: 0; color: #64748b; font-size: 14px; font-weight: 500;">Equipo IS Corp Support</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Main Content -->
+                    <tr>
+                        <td style="background-color: #ffffff; padding: 40px 40px 0;">
+                            <p style="margin: 0 0 20px 0; font-size: 22px; color: #001B5E; font-weight: 700; line-height: 1.4;">
+                                ¡Hola <strong style="color: #FFE600; font-weight: 800;"><?= nombre ?></strong>! 👋
+                            </p>
+                            
+                            <p style="margin: 0 0 24px 0; color: #475569; font-size: 17px; line-height: 1.8; font-weight: 500;">
+                                Te escribimos desde <strong style="color: #001B5E;">IS Corp Support</strong> para recordarte que tu equipo está listo para recambio según nuestras políticas corporativas del <strong style="color: #001B5E;"><?= trimestre ?></strong>.
+                            </p>
+
+                            <!-- Call to Action destacado -->
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 28px 0; background: linear-gradient(135deg, #FFE600 0%, #FFD700 100%); border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(255, 230, 0, 0.3);">
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <p style="margin: 0 0 12px 0; color: #001B5E; font-size: 18px; font-weight: 800; letter-spacing: -0.3px;">
+                                            🎯 Tu recambio está disponible
+                                        </p>
+                                        <p style="margin: 0; color: #001B5E; font-size: 15px; font-weight: 600; line-height: 1.6;">
+                                            Agenda tu cita ahora y mantén tu equipo actualizado
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Nueva Ubicación Sura - Rediseñado -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #22c55e; border-left: 6px solid #22c55e; border-radius: 18px; overflow: hidden;">
+                                <tr>
+                                    <td style="padding: 24px;">
+                                        <div style="display: inline-block; background: #22c55e; color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 16px;">
+                                            ✨ NUEVO
+                                        </div>
+                                        <h3 style="margin: 0 0 12px 0; color: #001B5E; font-size: 19px; font-weight: 800; letter-spacing: -0.3px;">
+                                            📍 Ahora también en Torre Sura
+                                        </h3>
+                                        <p style="margin: 0 0 16px 0; color: #166534; font-size: 15px; line-height: 1.7; font-weight: 500;">
+                                            Hemos habilitado un nuevo punto de atención en <strong style="color: #001B5E; font-weight: 700;">Torre Sura</strong> para que puedas agendar tu recambio con mayor flexibilidad.
+                                        </p>
+                                        <p style="margin: 0; color: #166534; font-size: 15px; line-height: 1.7; font-weight: 500;">
+                                            <strong style="color: #001B5E;">💡 Tip:</strong> Al agendar en <a href="https://melibooking.adminml.com/board" target="_blank" style="color: #001B5E; text-decoration: none; font-weight: 700; border-bottom: 2px solid #22c55e;">MeliBooking</a>, selecciona <strong>"Sura o Apoquindo"</strong> como punto de retiro.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Pasos para agendar - Rediseñado -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #ffffff; border: 2px solid #e5e7eb; border-radius: 18px; overflow: hidden;">
+                                <tr>
+                                    <td style="padding: 28px;">
+                                        <h3 style="margin: 0 0 24px 0; color: #001B5E; font-size: 20px; font-weight: 800; letter-spacing: -0.3px; text-align: center;">
+                                            📋 ¿Cómo agendar tu recambio?
+                                        </h3>
+                                        
+                                        <!-- Paso 1 -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
+                                            <tr>
+                                                <td width="50" valign="top" style="padding-right: 16px;">
+                                                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #FFE600 0%, #FFD700 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #001B5E; font-size: 18px;">
+                                                        1
+                                                    </div>
+                                                </td>
+                                                <td valign="top">
+                                                    <p style="margin: 0 0 6px 0; color: #001B5E; font-size: 16px; font-weight: 700;">
+                                                        Accede al portal de Services
+                                                    </p>
+                                                    <p style="margin: 0; color: #475569; font-size: 14px; line-height: 1.6;">
+                                                        Ingresa a <a href="https://melibooking.adminml.com/board" target="_blank" style="color: #001B5E; text-decoration: none; font-weight: 700; border-bottom: 2px solid #FFE600;">MeliBooking</a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <!-- Paso 2 -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
+                                            <tr>
+                                                <td width="50" valign="top" style="padding-right: 16px;">
+                                                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #FFE600 0%, #FFD700 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #001B5E; font-size: 18px;">
+                                                        2
+                                                    </div>
+                                                </td>
+                                                <td valign="top">
+                                                    <p style="margin: 0 0 6px 0; color: #001B5E; font-size: 16px; font-weight: 700;">
+                                                        Selecciona "Recambio Equipos MAC 2026"
+                                                    </p>
+                                                    <p style="margin: 0; color: #475569; font-size: 14px; line-height: 1.6;">
+                                                        Elige el día y horario que mejor se adapte a tu agenda
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <!-- Paso 3 -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="50" valign="top" style="padding-right: 16px;">
+                                                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #FFE600 0%, #FFD700 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #001B5E; font-size: 18px;">
+                                                        3
+                                                    </div>
+                                                </td>
+                                                <td valign="top">
+                                                    <p style="margin: 0 0 6px 0; color: #001B5E; font-size: 16px; font-weight: 700;">
+                                                        Confirma tu cita
+                                                    </p>
+                                                    <p style="margin: 0; color: #475569; font-size: 14px; line-height: 1.6;">
+                                                        ¡Listo! Te esperamos en nuestras dependencias
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <!-- Nota especial -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-top: 24px; background: #fef3c7; border-left: 4px solid #F4C542; border-radius: 12px; padding: 16px;">
+                                            <tr>
+                                                <td>
+                                                    <p style="margin: 0; color: #92400e; font-size: 14px; line-height: 1.6; font-weight: 600;">
+                                                        <strong style="color: #78350f;">📍 ¿Estás a más de 150 km de las oficinas?</strong><br>
+                                                        Coordina el envío por interno respondiendo este correo.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Location Info -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #eff6ff; border: 2px solid #3b82f6; border-left: 6px solid #3b82f6; border-radius: 18px;">
+                                <tr>
+                                    <td style="padding: 24px;">
+                                        <h3 style="margin: 0 0 20px 0; color: #001B5E; font-size: 18px; font-weight: 800; letter-spacing: -0.3px; padding-left: 12px; border-left: 4px solid #3b82f6;">▶ Ubicaciones para recambio</h3>
+                                        
+                                        <!-- Location Item 1 -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 14px; background-color: rgba(255, 255, 255, 0.95); border-radius: 14px; border-left: 4px solid #3b82f6;">
+                                            <tr>
+                                                <td width="40" valign="top" style="padding: 16px 0 16px 16px;">
+                                                    <span style="font-size: 20px; color: #3b82f6; font-weight: bold;">■</span>
+                                                </td>
+                                                <td style="padding: 16px 16px 16px 0;">
+                                                    <p style="margin: 0; color: #1e40af; font-weight: 600; font-size: 14px; line-height: 1.6;">
+                                                        <strong style="color: #001B5E; font-weight: 800; font-size: 15px; display: block; margin-bottom: 4px;">Piso 20 de la Torre 2</strong>
+                                                        (Av. Apoquindo 4800, Las Condes)
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <!-- Location Item 2 -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 14px; background-color: rgba(255, 255, 255, 0.95); border-radius: 14px; border-left: 4px solid #3b82f6;">
+                                            <tr>
+                                                <td width="40" valign="top" style="padding: 16px 0 16px 16px;">
+                                                    <span style="font-size: 20px; color: #3b82f6; font-weight: bold;">■</span>
+                                                </td>
+                                                <td style="padding: 16px 16px 16px 0;">
+                                                    <p style="margin: 0; color: #1e40af; font-weight: 600; font-size: 14px; line-height: 1.6;">
+                                                        <strong style="color: #001B5E; font-weight: 800; font-size: 15px; display: block; margin-bottom: 4px;">Piso 4 de la Torre Sura</strong>
+                                                        (Av. Apoquindo 4820, Zona MeliHelp Internal Systems Support)
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <!-- Location Item 3 - Horario -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: rgba(255, 255, 255, 0.95); border-radius: 14px; border-left: 4px solid #3b82f6;">
+                                            <tr>
+                                                <td width="40" valign="top" style="padding: 16px 0 16px 16px;">
+                                                    <span style="font-size: 20px; color: #3b82f6; font-weight: bold;">●</span>
+                                                </td>
+                                                <td style="padding: 16px 16px 16px 0;">
+                                                    <p style="margin: 0; color: #1e40af; font-weight: 600; font-size: 14px; line-height: 1.6;">
+                                                        <strong style="color: #001B5E; font-weight: 800; font-size: 15px;">Reserva de horario:</strong> La coordinación de tu cita se realiza exclusivamente a través de <a href="https://melibooking.adminml.com/board" target="_blank" style="color: #001B5E; text-decoration: none; font-weight: 700; border-bottom: 2px solid #3b82f6;">MeliBooking</a>. Los horarios disponibles se muestran directamente en la plataforma al momento de agendar.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Contact Info -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f0fdf4; border: 2px solid #22c55e; border-left: 6px solid #22c55e; border-radius: 18px;">
+                                <tr>
+                                    <td style="padding: 24px;">
+                                        <h3 style="margin: 0 0 20px 0; color: #001B5E; font-size: 18px; font-weight: 800; letter-spacing: -0.3px; padding-left: 12px; border-left: 4px solid #22c55e;">▶ Recursos Adicionales</h3>
+                                        
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: rgba(255, 255, 255, 0.95); border-radius: 14px; border-left: 4px solid #22c55e;">
+                                            <tr>
+                                                <td width="50" valign="middle" style="padding: 18px 0 18px 18px; text-align: center;">
+                                                    <span style="font-size: 28px; color: #22c55e; font-weight: bold;">●</span>
+                                                </td>
+                                                <td style="padding: 18px 18px 18px 0;">
+                                                    <p style="margin: 0; color: #166534; font-weight: 700; font-size: 16px; line-height: 1.6;">
+                                                        Accede a nuestro <a href="https://melihelp.adminml.com" target="_blank" style="color: #001B5E; text-decoration: none; font-weight: 800; border-bottom: 2px solid #22c55e;">Portal MeliHelp</a> para conocer todas las novedades de IS Support y gestionar tus solicitudes de forma autónoma.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Final Text -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <p style="margin: 0; color: #475569; font-size: 16px; line-height: 1.7;">
+                                Saludos cordiales.
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Signature Section -->
+                    <tr>
+                        <td style="padding: 0 40px 40px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8fafc; border-radius: 18px; border: 2px solid #e2e8f0;">
+                                <tr>
+                                    <td style="padding: 28px;">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="80" valign="top" style="padding-right: 24px;">
+                                                    <img src="https://drive.google.com/thumbnail?id=1U8xm_Zog32fKCDiPMF8AwCKOziRHWl5u&sz=w200" 
+                                                         alt="Internal Systems Logo" 
+                                                         width="80" 
+                                                         height="80" 
+                                                         style="display: block; width: 80px; height: auto; max-width: 80px; border: 0; outline: none; text-decoration: none;" />
+                                                </td>
+                                                <td valign="top">
+                                                    <p style="margin: 0 0 8px 0; font-style: italic; color: #64748b; font-size: 14px; line-height: 1.6;">Saludos cordiales,</p>
+                                                    <p style="margin: 0 0 6px 0; color: #1e293b; font-size: 15px; font-weight: 500; line-height: 1.6;"><strong style="color: #001B5E;">Equipo IS Corp Support</strong></p>
+                                                    <p style="margin: 0; font-weight: 700; color: #001B5E; font-size: 14px; line-height: 1.6;">Internal Systems - MercadoLibre</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+        
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #f8fafc; padding: 28px 40px; border-top: 3px solid #FFE600; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; text-align: center;">
+                            <p style="margin: 0 0 8px 0; font-weight: 700; color: #001B5E; font-size: 14px; line-height: 1.6;">Sistema de Recambios Q - MercadoLibre Chile</p>
+                            <p style="margin: 0; color: #64748b; font-size: 13px; line-height: 1.6;">Este es un sistema automático. Para consultas urgentes, responde directamente a este correo.</p>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
